@@ -1,30 +1,21 @@
 {
   "name": "w9_backend-project-the-code-bandits",
   "version": "1.0.0",
-  "description": "For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node --require dotenv/config app.js",
+    "dev": "nodemon --require dotenv/config app.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --forceExit app.test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SchoolOfCode/w9_backend-project-the-code-bandits.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SchoolOfCode/w9_backend-project-the-code-bandits/issues"
-  },
-  "homepage": "https://github.com/SchoolOfCode/w9_backend-project-the-code-bandits#readme",
   "dependencies": {
-    "express": "^4.18.1",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
     "pg": "^8.7.3"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1",
-    "jest": "^28.1.1",
-    "nodemon": "^2.0.16"
+    "jest": "^28.1.0",
+    "nodemon": "~2.0.15"
   }
 }
