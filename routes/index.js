@@ -1,5 +1,5 @@
 import express from "express";
-import { getResources } from "../models/resources";
+import { getResources } from "../models/resources.js";
 
 const router = express.Router();
 
