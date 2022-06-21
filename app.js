@@ -6,18 +6,24 @@ import router from "./routes/index.js";
 const app = express();
 
 // assigning port number
-const PORT = process.env.port || 3001;
+
+const port = 3001;
+
+
 
 //
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+
 app.use("/", router);
+
 
 console.log(app);
 
-//
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
