@@ -9,11 +9,17 @@ const testResource = [
     content_type: "article",
     topic: "Javascript",
   },
+  {
+    title: "Learn HTML",
+    url: "www.google.com",
+    content_type: "article",
+    topic: "HTML",
+  },
 ];
 
 async function populateTable() {
   try {
-    for (let i = 0; i <= testResource.length; i++) {
+    for (let i = 0; i < testResource.length; i++) {
       const res = await query(
         `INSERT INTO resources
           ( title, url, content_type, topic)
