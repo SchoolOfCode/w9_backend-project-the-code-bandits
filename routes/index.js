@@ -1,23 +1,19 @@
-import { getResources } from "../models/resources.js";
+import { getResources, createResource } from "../models/resources.js";
 import express, { response } from "express";
-import {query} from "../db/index.js"
+import { query } from "../db/index.js";
 
 const router = express.Router();
 
-router.post('/', async function(req, res) {
-    const resourceObj = req.body;
-    const data = await query(
-        `INSERT INTO resources
-        (title, url, content_type, topic)
-        VALUES ($1, $2, $3, $4);`,
-    [resourceObj.title, resourceObj.url, resourceObj.content_type, resourceObj.topic]
-    );
-    res.status(201).send("Successfully added")
-    console.log(data.rows)
+router.post("/resources", async function (req, res) {
+  const newResource = req.body;
+  await createResource(newResource);
+  res.json({
+    success: true,
+    payload: newResource,
+  });
 });
 
-
-router.get("/", async (req, res) => {
+router.get("/resources", async (req, res) => {
   const result = await getResources();
   res.json({
     success: true,
@@ -26,4 +22,3 @@ router.get("/", async (req, res) => {
 });
 
 export default router;
-
