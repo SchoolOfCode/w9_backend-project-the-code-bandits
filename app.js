@@ -8,12 +8,15 @@ const app = express();
 // assigning port number
 const port = 3001;
 
+// req.body
+app.use(express.json());
+
 //
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use('/', router);
+app.use("/", router);
 
 console.log(app);
 
