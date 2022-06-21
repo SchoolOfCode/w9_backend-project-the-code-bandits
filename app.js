@@ -1,5 +1,6 @@
 // searches and retrieves express function from folder called 'express' and stores in express var.
 import express from "express";
+import router from "./routes";
 
 // assigning the unpacked contents of express parent function
 const app = express();
@@ -11,6 +12,8 @@ const port = 3001;
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+app.use('/', router);
 
 console.log(app);
 
