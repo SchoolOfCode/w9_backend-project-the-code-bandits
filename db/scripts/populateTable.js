@@ -1,3 +1,5 @@
+//created function to add to table and test data array
+
 import { query } from "../../db/index.js";
 
 const testResource = [
