@@ -5,7 +5,7 @@ import express from "express";
 const app = express();
 
 // assigning port number
-const port = 3000;
+const port = 3001;
 
 //
 app.get("/", (req, res) => {
