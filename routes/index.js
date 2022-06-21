@@ -1,5 +1,8 @@
-import Express from "express";
+import express from "express";
+import {query} from "../db/index.js"
 
-app.post('/', (req, res) => {
-    res.send(req.arams)
-})
+const router = Express.Router();
+
+router.post('/', () => {
+    
+});
