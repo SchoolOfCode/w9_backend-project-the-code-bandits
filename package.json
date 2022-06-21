@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node --require dotenv/config app.js",
     "dev": "nodemon --require dotenv/config app.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --forceExit app.test.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --forceExit app.test.js",
+    "db: createTable": "node -r dotenv/config ./db/scripts/createTable.js",
+    "db:populateTable": "node -r dotenv/config ./db/scripts/populateTable.js",
+    "db:deleteTable": "node -r dotenv/config ./db/scripts/deleteTable.js"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
