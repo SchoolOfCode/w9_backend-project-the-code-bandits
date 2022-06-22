@@ -5,8 +5,12 @@ import { query } from "../db/index.js";
 const router = express.Router();
 
 router.post("/resources", async function (req, res) {
-  const newResource = req.body;
-  await createResource(newResource);
+  try {
+    const newResource = req.body;
+    await createResource(newResource);
+  } catch (error) {
+    console.log(error);
+  }
   res.json({
     success: true,
     payload: newResource,

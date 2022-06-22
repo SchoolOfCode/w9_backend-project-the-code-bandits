@@ -13,5 +13,4 @@ export async function createResource(resource) {
     [resource.title, resource.url, resource.content_type, resource.topic]
   );
   return newResource;
-  //res.status(201).send("Successfully added");
 }
