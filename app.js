@@ -6,17 +6,21 @@ import router from "./routes/index.js";
 const app = express();
 
 // assigning port number
-
 const port = 3001;
 
+
+// req.body
+app.use(express.json());
+
+// use app and set base path
+app.use("/", router);
+
+
+// test server
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use(express.json());
-app.use("/", router);
-
-//console.log(app);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
