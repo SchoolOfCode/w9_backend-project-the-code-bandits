@@ -12,6 +12,7 @@
     "db:deleteTable": "node -r dotenv/config ./db/scripts/deleteTable.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
