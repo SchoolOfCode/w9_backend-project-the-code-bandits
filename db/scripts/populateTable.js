@@ -1,4 +1,5 @@
-//created function to add to table and test data array
+//running this script adds test data to table to give us data to work with when testing front-end
+
 
 import { query } from "../../db/index.js";
 

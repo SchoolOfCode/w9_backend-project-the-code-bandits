@@ -1,4 +1,4 @@
-//create function to delete entire table from database
+//running this script deletes the table named 'resources' 
 
 import { query } from "../index.js";
 

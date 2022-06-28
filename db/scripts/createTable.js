@@ -1,4 +1,4 @@
-// function creates table with unique id
+// running this script creates the table to hold our resources
 import { query } from "../../db/index.js";
 async function createResourceTable() {
   console.log("start");
