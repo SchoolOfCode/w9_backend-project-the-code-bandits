@@ -21,24 +21,24 @@ Remember, you only have a few days to code a solution, so being agile is key. Th
 
 Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
 
-
 ## Features
 
 Allows data to be exchanged between Heroku database and React front-end.
 Scripts for initial set-up and edit of database.
 Express.js routing
+
 ## Skills & Tech
 
 - Node.js
 - Express
-- Cors 
+- Cors
 - PostgreSQL
 - Heroku
 - Postman
 
 ## File Structure
 
-``` 
+``` MD
 project
 │   README.md
 │       
@@ -86,4 +86,3 @@ project
 - db:createTable
 - db:deleteTable
 - db:populateTable
-
