@@ -20,3 +20,70 @@ Your project application might include the following:
 Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
 
 Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+
+
+## Features
+
+Allows data to be exchanged between Heroku database and React front-end.
+Scripts for initial set-up and edit of database.
+Express.js routing
+## Skills & Tech
+
+- Node.js
+- Express
+- Cors 
+- PostgreSQL
+- Heroku
+- Postman
+
+## File Structure
+
+``` 
+project
+│   README.md
+│       
+│
+└───db
+│   │  index.js 
+│   │  
+│   │
+│   └───scripts
+│       │   createTable.js
+│       │   deleteTable.js
+│       │   populateTable.js
+│   
+└───models
+|    │   
+|    │  resources.js
+|    
+|
+|---node-modules
+|
+|
+|
+|--- routes
+|       | 
+|       |   index.js
+|       |   plan.md
+|
+|--- .env
+|
+|--- .gitignore
+|
+|--- app.js
+|
+|--- package-lock.json
+|
+|---package.json
+
+```
+
+## Scripts
+
+- start
+- dev
+- test
+- db:createTable
+- db:deleteTable
+- db:populateTable
+
