@@ -1,3 +1,5 @@
+// router endpoints
+
 import { getResources, createResource } from "../models/resources.js";
 import express, { response } from "express";
 import { query } from "../db/index.js";
