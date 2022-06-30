@@ -1,23 +1,16 @@
-// searches and retrieves express function from folder called 'express' and stores in express var.
+// middlewares and test get route
 import express from "express";
 import router from "./routes/index.js";
 import cors from "cors";
 
-// assigning the unpacked contents of express parent function
 const app = express();
-
-// assigning port number
 const port = 3001;
 
 app.use(cors());
-
-// req.body
 app.use(express.json());
-
-// use app and set base path
 app.use("/", router);
 
-// test server
+// testing the server
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });

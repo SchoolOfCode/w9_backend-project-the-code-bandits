@@ -1,3 +1,5 @@
+// functions used to query the database
+
 import { query } from "../db/index.js";
 
 export async function getResources() {
